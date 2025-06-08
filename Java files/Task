@@ -1,0 +1,27 @@
+public class Task {
+    public static void main(String[] args) {
+        // Display all elements in the enum
+        System.out.println("All Elements:");
+        for (Element e : Element.values()) {
+            System.out.println(e.label + " (Atomic Number: " + e.atomicNumber + ", Atomic Weight: " + e.atomicWeight + ")");
+        }
+
+        // Accessing by Label
+        String label = "O";  // For Oxygen
+        Element elementByLabel = Element.valueOfLabel(label);
+        System.out.println("\nElement by label '" + label + "':");
+        System.out.println(elementByLabel.label + " (Atomic Number: " + elementByLabel.atomicNumber + ", Atomic Weight: " + elementByLabel.atomicWeight + ")");
+
+        // Accessing by Atomic Number
+        int atomicNumber = 6;  // For Carbon
+        Element elementByAtomicNumber = Element.valueOfAtomicNumber(atomicNumber);
+        System.out.println("\nElement by atomic number " + atomicNumber + ":");
+        System.out.println(elementByAtomicNumber.label + " (Atomic Number: " + elementByAtomicNumber.atomicNumber + ", Atomic Weight: " + elementByAtomicNumber.atomicWeight + ")");
+
+        // Accessing by Atomic Weight
+        float atomicWeight = 1.008f;  // For Hydrogen
+        Element elementByAtomicWeight = Element.valueOfAtomicWeight(atomicWeight);
+        System.out.println("\nElement by atomic weight " + atomicWeight + ":");
+        System.out.println(elementByAtomicWeight.label + " (Atomic Number: " + elementByAtomicWeight.atomicNumber + ", Atomic Weight: " + elementByAtomicWeight.atomicWeight + ")");
+    }
+}
