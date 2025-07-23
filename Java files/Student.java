@@ -1,14 +1,25 @@
 class Student {
-    public String name;  // Student's name
 
-    // Constructor to initialize the student's name
-    public Student(String name) {
-        this.name = name;
+    // Method 1: Registration Details
+    void registrationDetails() {
+        System.out.println("Registration Details method called.");
     }
 
-    // Override toString() to return the student's name when printed
-    @Override
-    public String toString() {
-        return name;
+    // Method 2: Marks Calculation
+    void marksCalc() {
+        System.out.println("Marks Calculation method called.");
+    }
+
+    // Method 3: Fees Calculation
+    void feesCalc() {
+        System.out.println("Fees Calculation method called.");
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student();
+
+        s1.registrationDetails();
+        s1.marksCalc();
+        s1.feesCalc();
     }
 }
